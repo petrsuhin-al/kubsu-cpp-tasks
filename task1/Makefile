@@ -9,7 +9,7 @@ complib: classic.cpp
 	g++ -shared -Wl,-soname,libdtask1.so.1 -o libdtask1.so ./classic.o
 	ldconfig -n .
 
-exe: test.cpp complib
+exe: test/test.cpp complib
 	g++ -std=c++14 ./test.cpp -L. -ldtask1 -o dynamic_task1
 
 run: exe

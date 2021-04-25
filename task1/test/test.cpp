@@ -3,7 +3,7 @@
 //
 
 #include <iostream>
-#include "classic.h"
+#include "../classic.h"
 
 using namespace std;
 

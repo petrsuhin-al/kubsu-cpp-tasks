@@ -1,44 +1,42 @@
-if [ False ]
-then
+#if [ False ]
+#then
+#
+#    # g++ -c -fpic dot.cpp
+#    # g++ -c -fpic gauss.cpp
+#    # g++ -c -fpic prog.cpp
+#
+#    # # cоздаём файл библиотеки
+#    # g++ -shared -Wl,-soname,libd1lab.so.1 -o libd1lab.so.1.0  ./dot.o ./gauss.o ./prog.o
+#
+#    # mkdir dynamic_lib
+#
+#    # cp libd1lab.so.1.0 ./dynamic_lib/libd1lab.so.1.0
+#
+#    # ldconfig -n ./dynamic_lib
+#
+#    # # cоздадим файл libd1lab.so как мягкую ссылку
+#    # ln -s ./dynamic_lib/libd1lab.so.1.0 ./dynamic_lib/libd1lab.so
+#
+#
+#    # export LD_LIBRARY_PATH=./dynamic_lib
+#
+#    # # compile
+#    # g++ ./test.cpp -L ./dynamic_lib -ld1lab -o dynamic_1lab
+#    echo "RUNNING"
+#fi
 
-    # g++ -c -fpic dot.cpp
-    # g++ -c -fpic gauss.cpp
-    # g++ -c -fpic prog.cpp
+alias g++='g++ -std=c++11'
 
-    # # cоздаём файл библиотеки
-    # g++ -shared -Wl,-soname,libd1lab.so.1 -o libd1lab.so.1.0  ./dot.o ./gauss.o ./prog.o
+g++ -c -fpic classic.cpp
 
-    # mkdir dynamic_lib
+g++ -shared -Wl,-soname,libdtask1.so.1 -o libdtask1.so ./classic.o
 
-    # cp libd1lab.so.1.0 ./dynamic_lib/libd1lab.so.1.0
+ldconfig -n ./lib
 
-    # ldconfig -n ./dynamic_lib
+export LD_LIBRARY_PATH=./lib
 
-    # # cоздадим файл libd1lab.so как мягкую ссылку
-    # ln -s ./dynamic_lib/libd1lab.so.1.0 ./dynamic_lib/libd1lab.so
-
-
-    # export LD_LIBRARY_PATH=./dynamic_lib
-
-    # # compile
-    # g++ ./test.cpp -L ./dynamic_lib -ld1lab -o dynamic_1lab
-    echo "RUNNING"
-fi
-
-
-
-g++ -c -std=c++11 -fpic dot.cpp
-
-# cоздаём файл библиотеки
-g++ -shared -Wl,-soname,libd1lab.so.1 -o libd1lab.so ./dot.o ./gauss.o ./prog.o
-
-ldconfig -n .
-
-export LD_LIBRARY_PATH=.
-
-# compile
-g++ ./test.cpp -L. -ld1lab -o dynamic_1lab
+g++ ./test/test.cpp -L./lib/ -ldtask1 -o ./lib/dynamic_task1
 
 rm *.o
 
-./dynamic_1lab >output.txt &
+./lib/dynamic_task1 > ./test/output.txt &
