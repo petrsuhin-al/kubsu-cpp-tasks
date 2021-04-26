@@ -1,5 +1,5 @@
 //
-// Created by Александр Петрушин on 25.04.2021.
+// Created by Alexander Petrushin on 25.04.2021.
 //
 
 #include "classic.h"

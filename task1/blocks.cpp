@@ -1,5 +1,5 @@
 //
-// Created by Александр Петрушин on 26.04.2021.
+// Created by Alexander Petrushin on 26.04.2021.
 //
 
 #include "blocks.h"
