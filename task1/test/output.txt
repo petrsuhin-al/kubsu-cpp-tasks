@@ -1,4 +1,0 @@
-Classic matrix multiplication:
-6 12 18 
-6 12 18 
-6 12 18 
