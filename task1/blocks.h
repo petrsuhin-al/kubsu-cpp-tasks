@@ -9,6 +9,7 @@
 
 using namespace std;
 
-vector<vector<double>> Blocks(vector<vector<double>>, vector<vector<double>>);
+void Blocks(double *, const double *, const double *, int, int);
+vector<vector<double>> VectorBlocks(vector<vector<double>>, vector<vector<double>>);
 
 #endif //TASK1_BLOCKS_H

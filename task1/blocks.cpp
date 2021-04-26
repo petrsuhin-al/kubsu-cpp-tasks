@@ -4,7 +4,6 @@
 
 #include "blocks.h"
 #include <vector>
-#include <iostream>
 
 using namespace std;
 
@@ -15,7 +14,7 @@ double* FlattenMatrix(vector<vector<double>> matrix)
     double* flattenMatrix = new double[matrixSize * matrixSize];
     int index = 0;
 
-    for (int i = 0; i < matrix.size(); ++i) {
+    for (int i = 0; i < matrix.size(); i++) {
         for (int j = 0; j < matrix[i].size(); j++) {
             flattenMatrix[index] = matrix[i][j];
             index++;
@@ -27,21 +26,24 @@ double* FlattenMatrix(vector<vector<double>> matrix)
 
 vector<vector<double>> parseToMatrix(double* matrix, int size)
 {
-    vector<vector<double>> resultMatrix(size);
-    int colIndex = 0;
+    vector<vector<double>> resultMatrix(size, vector<double>(size));
 
-    for (int i = 0; i < size * size; ++i) {
-        resultMatrix[colIndex][i] = matrix[i];
+    int rowIndex = 0, colIndex = 0;
 
-        if (i % size == 0) {
-            colIndex++;
+    for (int i = 0; i < size * size; i++) {
+        resultMatrix[rowIndex][colIndex] = matrix[i];
+        colIndex++;
+
+        if ((i + 1) % size == 0) {
+            colIndex = 0;
+            rowIndex++;
         }
     }
 
     return resultMatrix;
 }
 
-void MultBlocks(double *C, const double *A, const double *B, int n, int rowsize)
+void Blocks(double *C, const double *A, const double *B, int n, int rowsize)
 {
     if (n == 2) {
         const int d11 = 0;
@@ -59,18 +61,18 @@ void MultBlocks(double *C, const double *A, const double *B, int n, int rowsize)
         const int d21 = (n / 2) * rowsize;
         const int d22 = (n / 2) * (rowsize + 1);
 
-        MultBlocks(C + d11, A + d11, B + d11, n / 2, rowsize);
-        MultBlocks(C + d11, A + d12, B + d21, n / 2, rowsize);
-        MultBlocks(C + d12, A + d11, B + d12, n / 2, rowsize);
-        MultBlocks(C + d12, A + d12, B + d22, n / 2, rowsize);
-        MultBlocks(C + d21, A + d21, B + d11, n / 2, rowsize);
-        MultBlocks(C + d21, A + d22, B + d21, n / 2, rowsize);
-        MultBlocks(C + d22, A + d21, B + d12, n / 2, rowsize);
-        MultBlocks(C + d22, A + d22, B + d22, n / 2, rowsize);
+        Blocks(C + d11, A + d11, B + d11, n / 2, rowsize);
+        Blocks(C + d11, A + d12, B + d21, n / 2, rowsize);
+        Blocks(C + d12, A + d11, B + d12, n / 2, rowsize);
+        Blocks(C + d12, A + d12, B + d22, n / 2, rowsize);
+        Blocks(C + d21, A + d21, B + d11, n / 2, rowsize);
+        Blocks(C + d21, A + d22, B + d21, n / 2, rowsize);
+        Blocks(C + d22, A + d21, B + d12, n / 2, rowsize);
+        Blocks(C + d22, A + d22, B + d22, n / 2, rowsize);
     }
 }
 
-vector<vector<double>> Blocks(vector<vector<double>> firstMatrix, vector<vector<double>> secondMatrix)
+vector<vector<double>> VectorBlocks(vector<vector<double>> firstMatrix, vector<vector<double>> secondMatrix)
 {
     int solutionMatrixSize = firstMatrix.size();
 
@@ -80,12 +82,7 @@ vector<vector<double>> Blocks(vector<vector<double>> firstMatrix, vector<vector<
     double* flattenFirstMatrix = FlattenMatrix(firstMatrix);
     double* flattenSecondMatrix = FlattenMatrix(secondMatrix);
 
-
-    for (int i = 0; i < 8*8; ++i) {
-        cout << "row" << flattenFirstMatrix[i] << ' ';
-    }
-
-    MultBlocks(solutionMatrix, flattenFirstMatrix, flattenSecondMatrix, solutionMatrixSize, solutionMatrixSize);
+    Blocks(solutionMatrix, flattenFirstMatrix, flattenSecondMatrix, solutionMatrixSize, solutionMatrixSize);
 
     return parseToMatrix(solutionMatrix, solutionMatrixSize);
 }
