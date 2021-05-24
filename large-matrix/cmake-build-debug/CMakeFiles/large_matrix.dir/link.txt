@@ -1,0 +1,2 @@
+/Library/Developer/CommandLineTools/usr/bin/ar qc liblarge_matrix.a CMakeFiles/large_matrix.dir/library.cpp.o
+/Library/Developer/CommandLineTools/usr/bin/ranlib liblarge_matrix.a

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="large_matrix"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/alexander/Documents/GitHub/kubsu-cpp-tasks/large-matrix/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/alexander/Documents/GitHub/kubsu-cpp-tasks/large-matrix/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/alexander/Documents/GitHub/kubsu-cpp-tasks/large-matrix/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/alexander/Documents/GitHub/kubsu-cpp-tasks/large-matrix/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/alexander/Documents/GitHub/kubsu-cpp-tasks/large-matrix/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/alexander/Documents/GitHub/kubsu-cpp-tasks/large-matrix/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/alexander/Documents/GitHub/kubsu-cpp-tasks/large-matrix/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/alexander/Documents/GitHub/kubsu-cpp-tasks/large-matrix/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/alexander/Documents/GitHub/kubsu-cpp-tasks/large-matrix/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/alexander/Documents/GitHub/kubsu-cpp-tasks/large-matrix/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/alexander/Documents/GitHub/kubsu-cpp-tasks/large-matrix/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/alexander/Documents/GitHub/kubsu-cpp-tasks/large-matrix/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/alexander/Documents/GitHub/kubsu-cpp-tasks/large-matrix/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/alexander/Documents/GitHub/kubsu-cpp-tasks/large-matrix/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/alexander/Documents/GitHub/kubsu-cpp-tasks/large-matrix/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="large_matrix">
+				<Option output="/Users/alexander/Documents/GitHub/kubsu-cpp-tasks/large-matrix/cmake-build-debug/liblarge_matrix.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/alexander/Documents/GitHub/kubsu-cpp-tasks/large-matrix/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/alexander/Documents/GitHub/kubsu-cpp-tasks/large-matrix/cmake-build-debug/Makefile&quot;  VERBOSE=1 large_matrix"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/alexander/Documents/GitHub/kubsu-cpp-tasks/large-matrix/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/alexander/Documents/GitHub/kubsu-cpp-tasks/large-matrix/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/alexander/Documents/GitHub/kubsu-cpp-tasks/large-matrix/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="large_matrix/fast">
+				<Option output="/Users/alexander/Documents/GitHub/kubsu-cpp-tasks/large-matrix/cmake-build-debug/liblarge_matrix.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/alexander/Documents/GitHub/kubsu-cpp-tasks/large-matrix/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/alexander/Documents/GitHub/kubsu-cpp-tasks/large-matrix/cmake-build-debug/Makefile&quot;  VERBOSE=1 large_matrix/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/alexander/Documents/GitHub/kubsu-cpp-tasks/large-matrix/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/alexander/Documents/GitHub/kubsu-cpp-tasks/large-matrix/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/alexander/Documents/GitHub/kubsu-cpp-tasks/large-matrix/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/alexander/Documents/GitHub/kubsu-cpp-tasks/large-matrix/library.cpp">
+			<Option target="large_matrix"/>
+		</Unit>
+		<Unit filename="/Users/alexander/Documents/GitHub/kubsu-cpp-tasks/large-matrix/library.h">
+			<Option target="large_matrix"/>
+		</Unit>
+		<Unit filename="/Users/alexander/Documents/GitHub/kubsu-cpp-tasks/large-matrix/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
